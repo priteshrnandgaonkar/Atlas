@@ -2,7 +2,7 @@ public struct Country {
     public let code: String
     
     public init(code: String) {
-        print("HEY I AM THE EDITED PACKAGED")
+       // print("HEY I AM THE EDITED PACKAGED")
         self.code = code.uppercased()
     }
     
@@ -13,8 +13,7 @@ public struct Country {
     func regionalIndicatorSymbol(unicodeScalar: UnicodeScalar) -> UnicodeScalar? {
         let uppercaseA = UnicodeScalar("A")!
         let regionalIndicatorSymbolA = UnicodeScalar("\u{1f1e6}")!
-        let distance = unicodeScalar.value - uppercaseA.value
-        //ek hi flag print karunga hamesha ho gaya ok 
+        let distance = unicodeScalar.value - uppercaseA.value 
         return UnicodeScalar(regionalIndicatorSymbolA.value + distance)
     }
 }
