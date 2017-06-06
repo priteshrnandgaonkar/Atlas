@@ -4,6 +4,7 @@ import PackageDescription
 
 let package = Package(
     name: "Atlas",
+    dependencies: [.package(url: "../someShit", from:"1.0.0")],
     products: [
         .library(
             name: "Atlas",
@@ -12,7 +13,7 @@ let package = Package(
     targets: [
         .target(
             name: "Atlas",
-            dependencies: []),
+            dependencies: ["someShit"]),
         .testTarget(
             name: "AtlasTests",
             dependencies: ["Atlas"]),
