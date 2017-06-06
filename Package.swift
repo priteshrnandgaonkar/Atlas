@@ -4,12 +4,12 @@ import PackageDescription
 
 let package = Package(
     name: "Atlas",
-    dependencies: [.package(url: "../someShit", from:"1.0.0")],
     products: [
         .library(
             name: "Atlas",
             targets: ["Atlas"]),
-    ],
+    ],    
+    dependencies: [.package(url: "../someShit", from:"1.0.0")],
     targets: [
         .target(
             name: "Atlas",
